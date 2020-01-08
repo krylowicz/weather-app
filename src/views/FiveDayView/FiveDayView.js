@@ -11,14 +11,13 @@ class FiveDayView extends React.Component {
     getWeather = async () => {
         const response = (await (await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${Constants.CITY}&units=metric&appid=${Constants.API_KEY}`)).json()).list
         const days = {};
-        console.log(response);
 
         for (let hourData of response) {
             const date = new Date(hourData.dt * 1000);
 
             const hour = date.getHours();
             const day = date.getDate();
-            const name = Constants.WEEKDAYS[date.getDay() - 1];
+            const name = Constants.WEEKDAYS[date.getDay()];
 
             if (!days[day]) days[day] = {name, len: 0};
 
@@ -58,6 +57,7 @@ class FiveDayView extends React.Component {
         }
         list.pop();
         this.setState({weatherData: list});
+        console.log(this.state);
     };
 
     componentDidMount() {
