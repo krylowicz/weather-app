@@ -9,7 +9,7 @@ class FiveDayView extends React.Component {
     };
 
     getWeather = async () => {
-        const response = (await (await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${Constants.CITY}&units=metric&appid=${Constants.API_KEY}`)).json()).list
+        const response = (await (await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${Constants.CITY}&units=metric&appid=${Constants.API_KEY}`)).json()).list;
         const days = {};
 
         for (let hourData of response) {
@@ -76,6 +76,5 @@ class FiveDayView extends React.Component {
         )
     }
 }
-
 
 export default FiveDayView;

@@ -12,11 +12,11 @@ class OneDayView extends React.Component {
         const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${Constants.CITY}&units=metric&appid=${Constants.API_KEY}`);
 
         const response = await api_call.json();
-        console.log(response);
-        const date = new Date(response.dt*1000);
+
+        const date = new Date(response.dt * 1000);
         const day = Constants.WEEKDAYS[date.getDay() - 1];
         const tempDay = Math.floor(response.main.temp_max);
-        const tempNight = Math.floor(response.main.temp_min);
+        const tempNight = Math.floor(response.main.temp_min * 2);
         const weatherIcon = `http://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`;
 
         this.setState({weatherData: [{
@@ -26,7 +26,6 @@ class OneDayView extends React.Component {
             weatherIcon: weatherIcon
         }]});
 
-        console.log(this.state);
     };
 
     componentDidMount() {
