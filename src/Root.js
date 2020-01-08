@@ -4,7 +4,6 @@ import GlobalStyle from "./theme/GlobalStyle";
 import ContextWrapper from "./components/ContextWrapper/ContextWrapper";
 import Layout from "./components/Layout/Layout";
 import CurrentCity from "./components/CurrentCity/CurrentCity";
-import DarkModeSwitch from "./components/DarkModeSwitch/DarkModeSwitch";
 import FiveDayView from "./views/FiveDayView/FiveDayView";
 import OneDayView from "./views/OneDayView/OneDayView";
 import Navigation from "./components/Navigation/Navigation";
@@ -12,7 +11,7 @@ import Navigation from "./components/Navigation/Navigation";
 const Root = () => (
     <ContextWrapper>
         <GlobalStyle />
-        <DarkModeSwitch />
+        {/*<DarkModeSwitch />*/}
         <Layout>
             <BrowserRouter>
             <Navigation />

@@ -8,19 +8,12 @@ const Button = styled.button`
    height: 15px;
    font-size: 6rem;
    cursor: pointer;
-   position: absolute;
-   right: 75px;
-   top: 25px;   
    
    background-color: transparent;
    
-   &:focus {}
-    outline: none;
-    
-   @media (max-width: 500px) {
-     font-size: 4rem;
-     right: 50px;
-   }
+   &:focus {
+      outline: none;
+    }
 `;
 
 
