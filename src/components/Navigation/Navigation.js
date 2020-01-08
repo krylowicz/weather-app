@@ -25,7 +25,7 @@ const Links = styled.ul`
         margin-right: 20px;
       }
   }
-  //2 -4 6 -8  *(-1)
+  
   a {
     text-decoration: none;
     color: inherit;

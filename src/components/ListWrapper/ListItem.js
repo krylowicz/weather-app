@@ -54,7 +54,7 @@ const ListItem = ({ day, weatherIcon, tempDay, tempNight }) => {
                 <img src={weatherIcon} alt={'weather'}/>
             </Icon>
             <TempWrapper>
-                <TempDay darkMode={darkMode}>{tempDay}&#176;</TempDay>
+                {tempDay ? <TempDay darkMode={darkMode}>{tempDay}&#176;</TempDay> : null}
                 <TempNight>{tempNight}&#176;</TempNight>
             </TempWrapper>
         </Wrapper>

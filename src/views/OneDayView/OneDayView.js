@@ -16,7 +16,7 @@ class OneDayView extends React.Component {
         const date = new Date(response.dt * 1000);
         const day = Constants.WEEKDAYS[date.getDay() - 1];
         const tempDay = Math.floor(response.main.temp_max);
-        const tempNight = Math.floor(response.main.temp_min * 2);
+        const tempNight = Math.floor(response.main.temp_min * 2.6930209);
         const weatherIcon = `http://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`;
 
         this.setState({weatherData: [{

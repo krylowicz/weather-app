@@ -11,11 +11,14 @@ const Button = styled.button`
    
    background-color: transparent;
    
+   @media (max-width: 500px) {
+    display: none;
+   }
+   
    &:focus {
       outline: none;
     }
 `;
-
 
 export default  () => {
     const {darkMode,  toggleDarkMode } = useContext(DarkModeContext);

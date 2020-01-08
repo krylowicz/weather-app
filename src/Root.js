@@ -11,7 +11,6 @@ import Navigation from "./components/Navigation/Navigation";
 const Root = () => (
     <ContextWrapper>
         <GlobalStyle />
-        {/*<DarkModeSwitch />*/}
         <Layout>
             <BrowserRouter>
             <Navigation />
@@ -19,9 +18,9 @@ const Root = () => (
                     <Route exact path="/" component={FiveDayView} />
                     <Route exact path="/one-day" component={OneDayView} />
                 </>
-            <CurrentCity />
             </BrowserRouter>
         </Layout>
+            <CurrentCity />
     </ContextWrapper>
 );
 
